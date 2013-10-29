@@ -3,4 +3,4 @@ Collaborators: Brent Gaynor
                Tom Watson
                Nicole Paz
 
-[Trello link](https://trello.com/b/AnG3AtAtAl/social-network)
+[Trello link](https://trello.com/b/AnG3AtAl/social-network)
