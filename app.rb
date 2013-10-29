@@ -3,8 +3,8 @@ require 'active_record'
 require_relative './app/models/elephant'
 
 ActiveRecord::Base.establish_connection(adapter: 'postgresql',
-                                        database: 'sinatra_skeleton_dev')
+                                        database: 'social_network')
 
 get '/' do
-  "Hello World!"
+  "future home of the best. social. network. ever."
 end
