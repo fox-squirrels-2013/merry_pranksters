@@ -12,5 +12,7 @@ get '/' do
 end
 
 post '/' do
+  p params
+  
   erb :index
 end
