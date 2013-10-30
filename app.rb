@@ -12,6 +12,7 @@ get '/' do
 end
 
 get '/list' do
+  @list = Member.all
   erb :list
 end
 
