@@ -11,16 +11,20 @@ get '/' do
   erb :index
 end
 
+get '/list' do
+  erb :list
+end
+
+
+
+
+
 # helper methods
 
 # helpers do
-
 #   authenticate
-
 #   authorize per page
-
 #   OAuth
-
 #   enable sessions
-
 #   session[:user_id]
+
