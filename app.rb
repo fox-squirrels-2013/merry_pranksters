@@ -16,50 +16,19 @@ post '/' do
   erb :index
 end
 
+get '/sign_up' do
+  erb :sign_up
+end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+post '/sign_up' do
+  p params
+  erb :sign_up
+end
 
 get '/list' do
   @list = Member.all
   erb :list
 end
-
 
 
 
@@ -72,4 +41,6 @@ end
 #   OAuth
 #   enable sessions
 #   session[:user_id]
+
+
 
