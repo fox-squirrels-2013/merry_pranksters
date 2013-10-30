@@ -10,3 +10,7 @@ ActiveRecord::Base.establish_connection(adapter: 'postgresql',
 get '/' do
   erb :index
 end
+
+post '/' do
+  erb :index
+end
