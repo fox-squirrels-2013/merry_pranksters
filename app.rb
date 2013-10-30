@@ -10,3 +10,17 @@ ActiveRecord::Base.establish_connection(adapter: 'postgresql',
 get '/' do
   erb :index
 end
+
+# helper methods
+
+# helpers do
+
+#   authenticate
+
+#   authorize per page
+
+#   OAuth
+
+#   enable sessions
+
+#   session[:user_id]
