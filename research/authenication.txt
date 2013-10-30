@@ -1,0 +1,26 @@
+Authenication links
+
+Salted passwords? Something to check out for the future.
+
+1)
+
+Using a gem
+http://phamlabs.com/2013/03/17/Adding-the-sinatra-authentication-Gem.html
+
+Two types of users, admin and authenicated users
+
+First user that logs in becomes admin user.
+
+2)
+
+Using someone else's coding suggestions (two options)
+http://stackoverflow.com/questions/3559824/what-is-a-very-simple-authentication-scheme-for-sinatra-rack
+
+Two options here, one very very simple and one that is more persistant.
+
+3)
+
+OAuth as a solution (Users logging in via another API)
+https://github.com/charliepark/omniauth-for-sinatra
+
+Looks much more extensive and very interesting but probably well beyond the scope of this project... (for now...)
