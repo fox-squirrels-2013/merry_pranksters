@@ -11,6 +11,46 @@ get '/' do
   erb :index
 end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 get '/list' do
   @list = Member.all
   erb :list
