@@ -8,5 +8,5 @@ ActiveRecord::Base.establish_connection(adapter: 'postgresql',
                                         database: 'social_network')
 
 get '/' do
-  "future home of the best. social. network. ever."
+  erb :index
 end
