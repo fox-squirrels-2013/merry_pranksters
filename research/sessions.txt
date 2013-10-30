@@ -1,0 +1,9 @@
+Some links on sessions:
+
+http://rubylearning.com/blog/2009/09/30/cookie-based-sessions-in-sinatra/
+
+http://www.sinatrarb.com/intro.html#Using%20Sessions
+
+http://www.sinatrarb.com/faq.html#sessions
+
+Also the Sinatra book that was distributed Sunday. (If it's not readily available, I'll put it in the DBC Dropbox folder, or I'll provide a link to it in my Dropbox.)

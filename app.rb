@@ -13,6 +13,63 @@ end
 
 post '/' do
   p params
-  
   erb :index
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+get '/list' do
+  @list = Member.all
+  erb :list
+end
+
+
+
+
+
+# helper methods
+
+# helpers do
+#   authenticate
+#   authorize per page
+#   OAuth
+#   enable sessions
+#   session[:user_id]
+
