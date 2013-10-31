@@ -25,10 +25,15 @@ end
 
 post '/sign_up' do
   session["user"] = params[:username]
-  p params
   Member.create(username: params[:username], password: params[:password])
-  @list = Member.all   #This is hacky and we need to learn how to fix it
-  erb :list
+  # @list = Member.all   #This is hacky and we need to learn how to fix it
+  # erb :list
+  redirect '/list' 
+end
+
+post '/sign_in' do
+  session["user"] = params[:username]
+  redirect '/'
 end
 
 get '/list' do
@@ -50,6 +55,3 @@ end
 #   OAuth
 #   enable sessions
 #   session[:user_id]
-
-
-
