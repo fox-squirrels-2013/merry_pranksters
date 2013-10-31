@@ -2,9 +2,13 @@
 <link href='/styles.css' rel='stylesheet' type='text/css'>
 
 <div class="container">
-  <h2> list of merry pranksters </h2>
-  <br>
-  <% @list.each do |name| %>
-  <p><%= name.username %></p>
+  <% if session["user"] %>
+    <h2> list of merry pranksters </h2>
+    <br>
+    <% @list.each do |name| %>
+    <p><%= name.username %></p>
+    <% end %>
+  <% else %>
+    <h2>You need to be logged in to see this page.</h2>
   <% end %>
 </div>
