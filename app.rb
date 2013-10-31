@@ -49,7 +49,6 @@ post '/sign_out' do
   redirect '/'
 end
 
-
 # helper methods
 
 # helpers do

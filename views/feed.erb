@@ -1,0 +1,5 @@
+<% Feed.all.each do |feed| %>
+  <% Post.all.each do |post| %>
+    <p><%= post[:title] + ' ' + post[:content] %></p>
+  <% end %>
+<% end %>

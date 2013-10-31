@@ -7,6 +7,7 @@
     <br>
     <% if session["user"] %>
       <p><%= "You are logged in as: #{session["user"]}" %></p>
+      <%= erb :feed %>
     <% else %>
       <p>You are not signed in</p>
       <br>
