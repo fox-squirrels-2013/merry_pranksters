@@ -1,9 +1,11 @@
-Collaborators: Louie Perez
+Collaborators: 
 
-               Vanessa Pyne
+Louie Perez
+
+Vanessa Pyne
                
-               Tom Watson
+Tom Watson
                
-               Nicole Paz
+Nicole Paz
 
 [Trello link](https://trello.com/b/AnG3AtAl/social-network)
