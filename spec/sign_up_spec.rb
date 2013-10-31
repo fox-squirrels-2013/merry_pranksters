@@ -16,7 +16,7 @@ feature "Create a new account" do
     fill_in "username", with: "something"
     click_on "Save"
 
-    expect(page).to have_content("Please provide a username or password")
+    expect(page).to have_content("Please provide a valid username and/or password")
   end
 
 end

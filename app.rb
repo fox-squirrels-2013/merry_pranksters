@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'active_record'
+require 'sinatra/flash'
 require_relative './app/models/feed'
 require_relative './app/models/post'
 require_relative './app/models/member'
@@ -26,9 +27,11 @@ end
 post '/sign_up' do
   session["user"] = params[:username]
   Member.create(username: params[:username], password: params[:password])
-  # @list = Member.all   #This is hacky and we need to learn how to fix it
-  # erb :list
-  redirect '/list' if session["user"]
+  if session["user"]
+    redirect '/list'
+  else
+    flash[:notice] = "Please provide a valid username and/or password"
+  end
 end
 
 post '/sign_in' do
