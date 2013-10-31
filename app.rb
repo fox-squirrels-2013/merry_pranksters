@@ -28,7 +28,7 @@ post '/sign_up' do
   Member.create(username: params[:username], password: params[:password])
   # @list = Member.all   #This is hacky and we need to learn how to fix it
   # erb :list
-  redirect '/list' 
+  redirect '/list' if session["user"]
 end
 
 post '/sign_in' do
