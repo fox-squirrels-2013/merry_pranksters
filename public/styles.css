@@ -1,0 +1,32 @@
+body {
+	background-image: url('clouds.jpg');
+	background-repeat: repeat;
+	text-align: center;
+	font-size: 14px;
+	font-family: Helvetica, Arial, sans-serif;
+}
+.container {
+	background-color: #fff;
+	box-shadow: 5px 5px 5px #ccc;
+	width: 90%;
+	margin: 0 auto;
+	padding: 5px;
+}
+h1,h2,h3,h4,h5 {
+	font-family: 'Flamenco', sans-serif;
+	text-shadow: 2px 2px 2px #ccc;
+}
+h1 {
+	font-size: 30px;
+}
+h2 {
+	font-size: 24px;
+}
+h3 {
+	font-size: 20px;
+}
+a {
+	color: #26517C;
+	text-decoration: none;
+	padding: 2px;
+}
