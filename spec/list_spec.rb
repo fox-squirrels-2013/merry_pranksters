@@ -18,6 +18,6 @@ feature "Listing members" do
   #   visit '/list'
 
   #   expect(page).to have_content("Please log in to see a list of members")
-  end
+  # end
 
 end
