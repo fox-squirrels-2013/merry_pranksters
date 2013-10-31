@@ -22,7 +22,9 @@ end
 
 post '/sign_up' do
   p params
-  erb :sign_up
+  Member.create(username: params[:username], password: params[:password])
+  @list = Member.all   #This is hacky and we need to learn how to fix it
+  erb :list
 end
 
 get '/list' do
