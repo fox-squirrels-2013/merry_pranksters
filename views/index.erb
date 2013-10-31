@@ -5,6 +5,12 @@
   <div class="container">
     <h1> "future home of the best. social. network. ever." </h1>
     <br>
+    <% if session["user"] %>
+      <p><%= "You are logged in as: #{session["user"]}" %></p>
+    <% else %>
+      <p>You are not signed in</p>
+    <% end %>
+    <br>
     <h2>Sign in:</h2>
     <form action="/" method="post">
       <label for="auth">Member email</label><br />
@@ -16,6 +22,10 @@
       <input type="submit" value="Go!" />
     </form>  
 
-    <a href="/sign_up">Sign Up!</a>
+    <button><a href="/sign_up">Sign Up!</a></button>
+    <form action="/sign_out" method="post">
+      <input type="hidden" id="signing_out" value="" />
+      <button>Sign Out</button>
+    </form>
   </div>
 </body>

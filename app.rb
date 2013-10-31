@@ -7,7 +7,10 @@ require_relative './app/models/member'
 ActiveRecord::Base.establish_connection(adapter: 'postgresql',
                                         database: 'social_network')
 
+enable :sessions
+
 get '/' do
+  session["user"] ||= nil
   erb :index
 end
 
@@ -21,6 +24,7 @@ get '/sign_up' do
 end
 
 post '/sign_up' do
+  session["user"] = params[:username]
   p params
   erb :sign_up
 end
@@ -30,7 +34,10 @@ get '/list' do
   erb :list
 end
 
-
+post '/sign_out' do
+  session["user"] = nil
+  redirect '/'
+end
 
 
 # helper methods
