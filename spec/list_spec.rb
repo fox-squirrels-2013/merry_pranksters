@@ -13,12 +13,12 @@ feature "Listing members" do
     expect(page).to have_content("list of merry pranksters")
   end
 
-  # scenario "Visitor cannot see the list of members" do
-  #   visit '/'
-  #   # click_on 'Log Out' # if test is logged in -- does this even matter?
-  #   visit '/list'
+  scenario "Visitor cannot see the list of members" do
+    visit '/'
+    # click_on 'Log Out' # if test is logged in -- does this even matter?
+    visit '/list'
 
-  #   expect(page).to have_content("Please log in to see a list of members")
-  # end
+    expect(page).to have_content("You need to be logged in to see this page.")
+  end
 
 end
