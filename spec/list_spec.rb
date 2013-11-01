@@ -6,6 +6,7 @@ feature "Listing members" do
     visit '/sign_up'
     fill_in "username", with: "bibble"
     fill_in "password", with: "password"
+    fill_in "email", with: "email@email.com"
     click_on 'Save'
     visit '/list'
 
