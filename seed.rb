@@ -9,6 +9,6 @@ ActiveRecord::Base.establish_connection(adapter: 'postgresql',
   Member.create(username: Faker::Name.first_name, password: Faker::Lorem.word)
 end
 
-100.times do
-  Post.create(feed_id: rand(1..20),title: Faker::Lorem.word, content: Faker::Lorem.words)
-end
+# 100.times do
+#   Post.create(feed_id: rand(1..20),title: Faker::Lorem.word, content: Faker::Lorem.words)
+# end
