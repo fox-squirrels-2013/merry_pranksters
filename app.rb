@@ -30,7 +30,7 @@ post '/sign_up' do
   if session["user"]
     redirect '/list'
   else
-    flash[:notice] = "Please provide a valid username and/or password"
+    flash[:error] = "Please provide a valid username and/or password"
   end
 end
 
