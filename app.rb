@@ -26,7 +26,7 @@ end
 
 post '/sign_up' do
   session["user"] = params[:username]
-  Member.create(username: params[:username], password: params[:password])
+  Member.create(username: params[:username], password: params[:password], email: params[:email])
   if session["user"]
     redirect '/list'
   else
