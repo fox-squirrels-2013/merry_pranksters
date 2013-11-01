@@ -26,9 +26,8 @@ end
 
 post '/sign_up' do
   session["user"] = params[:username]
-  Member.create(username: params[:username], password_hash: params[:password])
+  Member.create(username: params[:username], password: params[:password])
   if session["user"]
-    # @list = Member.all
     redirect '/list'
   else
     flash[:notice] = "Please provide a valid username and/or password"
@@ -37,7 +36,7 @@ post '/sign_up' do
 end
 
 post '/sign_in' do
-  @user = User.find_by_username(params[:username])
+  @user = Member.find_by_username(params[:username])
   if @user.password == params[:password]
     session[:user] = @user.username
     redirect '/'
