@@ -30,3 +30,7 @@ a {
 	text-decoration: none;
 	padding: 2px;
 }
+label {
+	font-family: 'Flamenco', sans-serif;
+	text-shadow: 2px 2px 2px #ccc;
+}
