@@ -6,7 +6,7 @@ ActiveRecord::Base.establish_connection(adapter: 'postgresql',
                                         database: 'social_network')
 
 60.times do
-  Member.create(username: Faker::Name.first_name, password: Faker::Lorem.word, username: Faker::Internet.email)
+  Member.create(username: Faker::Name.first_name, password: Faker::Lorem.word, email: Faker::Internet.email)
 end
 
 # 100.times do
