@@ -1,0 +1,14 @@
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/list">List of Members</a></li>
+
+    <% if session["user"] %>
+
+      <form action="/sign_out" method="post">
+        <input type="hidden" id="signing_out" value="" />
+        <li><button>Sign Out</button></li>
+      </form>
+    <% end %>
+  <ul>
+</nav>

@@ -34,3 +34,7 @@ label {
 	font-family: 'Flamenco', sans-serif;
 	text-shadow: 2px 2px 2px #ccc;
 }
+li {
+	float: left;
+	padding: 2px;
+}
