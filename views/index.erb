@@ -6,16 +6,30 @@
     <% end %>
     <h2>Sign in:</h2>
     <form action="/" method="post">
-      <label for="auth">Member email</label><br />
-      <input id="auth" name="email" type="text" value="" />
-      <label for="auth">Member Password</label><br />
-      <input id="auth" name="password" type="text" value="" />
+
+      <div class="signin">
+        <label for="auth">Member email</label>
+        <input id="auth" name="email" type="text" value="" />
+      </div>
+
+      <div class="signin">
+        <label for="auth">Member Password</label>
+        <input id="auth" name="password" type="text" value="" />
+
+      </div>
       <input type="submit" value="Go!" />
     </form>  
 
+
+
+    <div id="">
     <button><a href="/sign_up">Sign Up!</a></button>
+    
     <form action="/sign_out" method="post">
       <input type="hidden" id="signing_out" value="" />
-      <button>Sign Out</button>
+      <button><a>Sign Out</a></button>
+    </div>
+
+
     </form>
   </div>

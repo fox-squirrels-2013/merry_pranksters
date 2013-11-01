@@ -5,6 +5,7 @@ body {
 	font-size: 14px;
 	font-family: Helvetica, Arial, sans-serif;
 }
+
 .container {
 	background-color: #fff;
 	box-shadow: 5px 5px 5px #ccc;
@@ -12,8 +13,9 @@ body {
 	margin: 0 auto;
 	padding: 5px;
 }
+
 h1,h2,h3,h4,h5 {
-	font-family: 'Flamenco', sans-serif;
+	font-family: 'Oleo Script', sans-serif;
 	text-shadow: 2px 2px 2px #ccc;
 }
 h1 {
@@ -26,7 +28,21 @@ h3 {
 	font-size: 20px;
 }
 a {
-	color: #26517C;
+	color: #199A7A;
 	text-decoration: none;
 	padding: 2px;
+}
+.signin {
+	font-family: 'Oleo Script', sans-serif;
+}
+p {
+	font-family: 'Oxygen', sans-serif;
+}
+button {
+	font-family: 'Oxygen', sans-serif;
+}
+nav {
+	font-family: 'Oleo Script', sans-serif;
+	font-size: 2em;
+	color: red;
 }
