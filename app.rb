@@ -27,7 +27,7 @@ end
 post '/sign_up' do
   p new_member = Member.create(username: params[:username], password: params[:password], email: params[:email])
   p session["user"] = new_member.id
-  flash[:error] = "Please provide a valid username and/or password"
+  flash[:error] = "Incorrect format detected, Please check your inputs"
   if session["user"] == nil
     redirect '/sign_up'
   else
