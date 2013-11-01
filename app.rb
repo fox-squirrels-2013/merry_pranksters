@@ -49,6 +49,13 @@ post '/sign_out' do
   redirect '/'
 end
 
+post '/post/new' do
+  user_id = Member.where(username: session["name"])
+  feed_id = Feed.where(member_id: user_id)
+  Post.create(feed_id: feed_id, title: params[:title], content: params[:content])
+  redirect '/'
+end
+
 # helper methods
 
 # helpers do
