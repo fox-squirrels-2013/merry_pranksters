@@ -9,23 +9,29 @@
       <p><%= "You are logged in as: #{session["user"]}" %></p>
     <% else %>
       <p>You are not signed in</p>
-    <% end %>
-    <br>
-    <h2>Sign in:</h2>
-    <form action="/" method="post">
-      <label for="auth">Member email</label><br />
-      <input id="auth" name="email" type="text" value="" />
-      <br />
-      <label for="auth">Member Password</label><br />
-      <input id="auth" name="password" type="text" value="" />
-      <br />
-      <input type="submit" value="Go!" />
-    </form>  
+      <br>
+      <h2>Sign in:</h2>
+      <form action="/sign_in" method="post">
+        <label for="auth">Member email</label><br>
+        <input id="auth" name="email" type="text" value="" />
+        <br>
+        <label for="auth">Member Password</label><br>
+        <input id="auth" name="password" type="text" value="" />
+        <br>
+        <input type="submit" value="Go!" />
+      </form>  
 
-    <button><a href="/sign_up">Sign Up!</a></button>
-    <form action="/sign_out" method="post">
-      <input type="hidden" id="signing_out" value="" />
-      <button>Sign Out</button>
-    </form>
+      <% flash[:notice] if flash[:notice] %>
+
+      <button><a href="/sign_up">Sign Up!</a></button>
+
+    <% end %>
+    <% if session["user"] %>
+
+      <form action="/sign_out" method="post">
+        <input type="hidden" id="signing_out" value="" />
+        <button>Sign Out</button>
+      </form>
+    <% end %>
   </div>
 </body>

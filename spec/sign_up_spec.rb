@@ -8,7 +8,7 @@ feature "Create a new account" do
     fill_in "password", with: "password"
     click_on "Save"
 
-    expect(page).to have_content("You have successfully created an account")
+    expect(page).to have_content("list of merry pranksters")
   end
 
   scenario "Visitor does not provide a username and/or password" do
@@ -16,7 +16,7 @@ feature "Create a new account" do
     fill_in "username", with: "something"
     click_on "Save"
 
-    expect(page).to have_content("Please provide a username or password")
+    expect(page).to have_content("Please provide a valid username and/or password")
   end
 
 end
