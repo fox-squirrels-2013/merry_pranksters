@@ -1,24 +1,15 @@
-<link href='http://fonts.googleapis.com/css?family=Flamenco' rel='stylesheet' type='text/css'>
-<link href='/styles.css' rel='stylesheet' type='text/css'>
-
-<body>
   <div class="container">
-    <h1> "future home of the best. social. network. ever." </h1>
-    <br>
     <% if session["user"] %>
-      <p><%= "You are logged in as: #{session["user"]}" %></p>
+    <p><%= "You are logged in as: #{session["user"]}" %></p>
     <% else %>
-      <p>You are not signed in</p>
+    <p>You are not signed in</p>
     <% end %>
-    <br>
     <h2>Sign in:</h2>
     <form action="/" method="post">
       <label for="auth">Member email</label><br />
       <input id="auth" name="email" type="text" value="" />
-      <br />
       <label for="auth">Member Password</label><br />
       <input id="auth" name="password" type="text" value="" />
-      <br />
       <input type="submit" value="Go!" />
     </form>  
 
@@ -28,4 +19,3 @@
       <button>Sign Out</button>
     </form>
   </div>
-</body>
