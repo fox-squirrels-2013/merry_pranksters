@@ -29,7 +29,7 @@ post '/sign_up' do
   p session["user"] = new_member.id
   flash[:error] = "Please provide a valid username and/or password"
   if session["user"] == nil
-    redirect 'sign_up'
+    redirect '/sign_up'
   else
     redirect '/list'
   end
