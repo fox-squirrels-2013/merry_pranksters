@@ -25,12 +25,13 @@ get '/sign_up' do
 end
 
 post '/sign_up' do
-  session["user"] = params[:username]
-  Member.create(username: params[:username], password: params[:password], email: params[:email])
-  if session["user"]
-    redirect '/list'
+  p new_member = Member.create(username: params[:username], password: params[:password], email: params[:email])
+  p session["user"] = new_member.id
+  flash[:error] = "Please provide a valid username and/or password"
+  if session["user"] == nil
+    redirect 'sign_up'
   else
-    flash[:error] = "Please provide a valid username and/or password"
+    redirect '/list'
   end
 end
 
