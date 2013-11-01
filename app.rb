@@ -31,6 +31,7 @@ post '/sign_up' do
     redirect '/list'
   else
     flash[:notice] = "Please provide a valid username and/or password"
+    redirect '/'
   end
 end
 
