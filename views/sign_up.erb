@@ -16,9 +16,7 @@
           Password: <input type="text" name="password"><br>
         <input type="submit" value="Save">
       </form>
-      <% if flash[:notice] %>
-        <p><%= flash[:notice] %></p>
-      <% end %>
+      <% "#{flash[:error]}" if flash[:error] %>
     <% else %>
       <p>You're already logged in!!!</p>
     <% end %>
