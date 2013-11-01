@@ -5,6 +5,7 @@
   <div class="container">
     <a class="nav" href="/">Home</a>
     <% unless session["user"] %>
+    
       <h1> "Enter your information below to sign up for an account!" </h1>
 
       <h2> "Seriously, just your username and a password..." </h2>
@@ -21,10 +22,11 @@
       <%if flash[:error] %>
         <%= flash[:error] %>
       <% end %>
-      
+
     <% else %>
       <p>You're already logged in!!!</p>
     <% end %>
+
   </div>
 
 </body>
