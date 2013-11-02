@@ -4,7 +4,7 @@
     <%= erb :navigation %>
     <br>
     <% @list.each do |name| %>
-    <p><%= name.username %></p>
+    <p><a href="/member/<%=  name.id %>"><%= name.username %></a></p>
     <% end %>
   <% else %>
   <h2>You need to be logged in to see this page.</h2>
