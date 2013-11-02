@@ -26,7 +26,8 @@ end
 
 post '/sign_up' do
   session["user"] = params[:username]
-  Member.create(username: params[:username], password: params[:password])
+  mem = Member.create(username: params[:username], password: params[:password])
+  Feed.create(member_id: mem.id)
   if session["user"]
     redirect '/list'
   else
@@ -61,6 +62,12 @@ post '/post/new' do
   feed_id = Feed.where(member_id: user_id)
   Post.create(feed_id: feed_id, title: params[:title], content: params[:content])
   redirect '/'
+end
+
+get '/member/:id' do
+  # @posts = Post.find_by_feed_id(params[:id])
+  @posts = Post.where(feed_id: params[:id])
+  erb :feed
 end
 
 # helper methods
