@@ -36,8 +36,14 @@ post '/sign_up' do
 end
 
 post '/sign_in' do
-  session["user"] = params[:username]
-  redirect '/'
+  @user = Member.find_by_username(params[:username])
+  if @user.password == params[:password]
+    session[:user] = @user.username
+    redirect '/'
+  else
+    flash[:notice] = "Please provide a valid username and password combination"
+    redirect '/'
+  end
 end
 
 get '/list' do
