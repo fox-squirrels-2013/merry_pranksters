@@ -32,4 +32,31 @@
 
 
     </form>
+
+    <h1> "future home of the best. social. network. ever." </h1>
+    <%= erb :navigation %>
+    <br>
+    <% if session["user"] %>
+      <p><%= "You are logged in as: #{session["user"]}" %></p>
+      <%= erb :post %>
+      <%= erb :feed %>
+    <% else %>
+      <p>You are not signed in</p>
+      <br>
+      <h2>Sign in:</h2>
+      <form action="/sign_in" method="post">
+        <label for="auth">Member user name</label><br>
+        <input id="auth" name="username" type="text" value="" />
+        <br>
+        <label for="auth">Member Password</label><br>
+        <input id="auth" name="password" type="password" value="" />
+        <br>
+        <input type="submit" value="Go!" />
+      </form>  
+
+      <% flash[:notice] if flash[:notice] %>
+
+      <button><a href="/sign_up">Sign Up!</a></button>
+
+    <% end %>
   </div>
