@@ -1,61 +1,42 @@
   <div class="container">
     <% if session["user"] %>
-    <p><%= "You are logged in as: #{session["user"]}" %></p>
+      <p><%= "You are logged in as: #{session["user"]}" %></p>
+      <form action="/sign_out" method="post">
+        <input type="hidden" id="signing_out" value="" />
+        <button><a>Sign Out</a></button>
+      </div>
+      </form>
     <% else %>
-    <p>You are not signed in</p>
+      <p>You are not signed in</p>
+      <h2>Sign in</h2>
+      <form action="/sign_in" method="post">
+
+        <div class="signin">
+          <label for="auth">Member Username</label>
+          <input id="auth" name="username" type="text" value="" />
+        </div>
+
+        <div class="signin">
+          <label for="auth">Member Password</label>
+          <input id="auth" name="password" type="password" value="" />
+
+        </div>
+        <input type="submit" value="Go!" />
+      </form>  
+      <div id="">
+        <button><a href="/sign_up">Sign Up!</a></button>
+      </div>
     <% end %>
     <div id="sign">
-    <h2>Sign in</h2>
-    <form action="/" method="post">
-
-      <div class="signin">
-        <label for="auth">Member email</label>
-        <input id="auth" name="email" type="text" value="" />
-      </div>
-
-      <div class="signin">
-        <label for="auth">Member Password</label>
-        <input id="auth" name="password" type="text" value="" />
-
-      </div>
-      <input type="submit" value="Go!" />
-    </form>  
-  </div>
-
-
-
-    <div id="">
-    <button><a href="/sign_up">Sign Up!</a></button>
-    
-    <form action="/sign_out" method="post">
-      <input type="hidden" id="signing_out" value="" />
-      <button><a>Sign Out</a></button>
-    </div>
-
-
-    </form>
-
     <%= erb :_navigation %>
     <br>
     <% if session["user"] %>
-      <p><%= "You are logged in as: #{session["user"]}" %></p>
+
       <%= erb :post %>
-      <%= erb :feed %>
+      <%= erb :_all_posts %>
     <% else %>
-      <!-- <h2>Sign in:</h2>
-      <form action="/sign_in" method="post">
-        <label for="auth">Member user name</label><br>
-        <input id="auth" name="username" type="text" value="" />
-        <br>
-        <label for="auth">Member Password</label><br>
-        <input id="auth" name="password" type="password" value="" />
-        <br>
-        <input type="submit" value="Go!" />
-      </form>   -->
 
       <% flash[:notice] if flash[:notice] %>
-
-      <button><a href="/sign_up">Sign Up!</a></button>
 
     <% end %>
   </div>
