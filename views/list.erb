@@ -1,7 +1,7 @@
 <div class="container">
   <% if session["user"] %>
     <h2> list of merry pranksters </h2>
-    <%= erb :navigation %>
+    <%= erb :_navigation %>
     <br>
     <% @list.each do |name| %>
     <p><%= name.username %></p>

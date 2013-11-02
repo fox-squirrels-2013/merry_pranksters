@@ -1,6 +1,6 @@
 body {
-	background-image: url('clouds.jpg');
-	background-repeat: repeat;
+	/*background-image: url('clouds.jpg');*/
+	/*background-repeat: repeat;*/
 	text-align: center;
 	font-size: 14px;
 	font-family: Helvetica, Arial, sans-serif;
@@ -8,15 +8,15 @@ body {
 
 .container {
 	background-color: #fff;
-	box-shadow: 5px 5px 5px #ccc;
-	width: 90%;
-	margin: 0 auto;
+	/*box-shadow: 5px 5px 5px #ccc;*/
+	width: 80%;
+	margin: 10em 0 0;
 	padding: 5px;
 }
 
 h1,h2,h3,h4,h5 {
 	font-family: 'Oleo Script', sans-serif;
-	text-shadow: 2px 2px 2px #ccc;
+	/*text-shadow: 2px 2px 2px #ccc;*/
 }
 h1 {
 	font-size: 30px;
@@ -31,6 +31,7 @@ a {
 	color: #199A7A;
 	text-decoration: none;
 	padding: 2px;
+	text-align: left;
 }
 
 .signin {
@@ -42,18 +43,18 @@ p {
 button {
 	font-family: 'Oxygen', sans-serif;
 }
-nav {
-	font-family: 'Oleo Script', sans-serif;
-	font-size: 2em;
-	color: red;
-}
+
 
 label {
 	font-family: 'Flamenco', sans-serif;
-	text-shadow: 2px 2px 2px #ccc;
+	/*text-shadow: 2px 2px 2px #ccc;*/
 }
 
 li {
 	float: left;
 	padding: 2px;
+}
+
+#sign {
+	background-color: #FF66FF;
 }

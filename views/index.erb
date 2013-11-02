@@ -4,7 +4,8 @@
     <% else %>
     <p>You are not signed in</p>
     <% end %>
-    <h2>Sign in:</h2>
+    <div id="sign">
+    <h2>Sign in</h2>
     <form action="/" method="post">
 
       <div class="signin">
@@ -19,6 +20,7 @@
       </div>
       <input type="submit" value="Go!" />
     </form>  
+  </div>
 
 
 
@@ -33,17 +35,14 @@
 
     </form>
 
-    <h1> "future home of the best. social. network. ever." </h1>
-    <%= erb :navigation %>
+    <%= erb :_navigation %>
     <br>
     <% if session["user"] %>
       <p><%= "You are logged in as: #{session["user"]}" %></p>
       <%= erb :post %>
       <%= erb :feed %>
     <% else %>
-      <p>You are not signed in</p>
-      <br>
-      <h2>Sign in:</h2>
+      <!-- <h2>Sign in:</h2>
       <form action="/sign_in" method="post">
         <label for="auth">Member user name</label><br>
         <input id="auth" name="username" type="text" value="" />
@@ -52,7 +51,7 @@
         <input id="auth" name="password" type="password" value="" />
         <br>
         <input type="submit" value="Go!" />
-      </form>  
+      </form>   -->
 
       <% flash[:notice] if flash[:notice] %>
 
